@@ -21,6 +21,7 @@
         {{ 'pages.login.form.password.errors.required' | translate }}
       </small>
     </div>
+    <small class="text-danger" *ngIf="loginError">{{ 'pages.login.form.loginError' | translate }}</small>
     <div class="text-center">
       <button type="submit" class="btn btn-primary mt-4">{{ 'pages.login.form.submitButton' | translate }}</button>
     </div>

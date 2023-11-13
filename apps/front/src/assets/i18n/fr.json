@@ -16,6 +16,7 @@
             "required": "Le mot de passe est obligatoire"
           }
         },
+        "loginError": "Email ou mot de passe incorrect",
         "submitButton": "Se connecter"
       },
       "forgotPassword": "Mot de passe oublié ?"
