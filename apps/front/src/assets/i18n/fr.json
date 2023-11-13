@@ -13,9 +13,7 @@
         "password": {
           "label": "Mot de passe",
           "errors": {
-            "required": "Le mot de passe est obligatoire",
-            "minLength": "Le mot de passe doit faire au moins {{ minLength }} caractères",
-            "pattern": "Le mot de passe doit contenir au moins une lettre, un chiffre et un caractère spécial"
+            "required": "Le mot de passe est obligatoire"
           }
         },
         "submitButton": "Se connecter"

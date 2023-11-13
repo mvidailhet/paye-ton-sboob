@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,19 +16,16 @@ export class LoginComponent {
       '',
       [
         Validators.required,
-        Validators.minLength(this.passwordMinLength),
-        Validators.pattern(
-          '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&]'
-        ),
       ],
     ],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   onSubmit() {
-    console.log('submit');
-    console.log(this.loginForm);
+    this.loginForm.markAllAsTouched();
+    if (this.loginForm.invalid) return;
+    this.router.navigate(['/home']);
   }
 
   get email() {

@@ -20,12 +20,6 @@
       <small class="text-danger" *ngIf="password.touched && password.hasError('required')">
         {{ 'pages.login.form.password.errors.required' | translate }}
       </small>
-      <small class="text-danger" *ngIf="password.touched && password.hasError('minlength')">
-        {{ 'pages.login.form.password.errors.minLength' | translate:{ minLength: passwordMinLength } }}
-      </small>
-      <small class="text-danger" *ngIf="password.touched && password.hasError('pattern') && !password.hasError('minlength')">
-        {{ 'pages.login.form.password.errors.pattern' | translate }}
-      </small>
     </div>
     <div class="text-center">
       <button type="submit" class="btn btn-primary mt-4">{{ 'pages.login.form.submitButton' | translate }}</button>
