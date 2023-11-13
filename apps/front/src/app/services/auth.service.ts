@@ -28,6 +28,10 @@ export class AuthService {
     return true;
   }
 
+  logout(): void {
+    localStorage.removeItem('user');
+  }
+
   isLogged(): boolean {
     const user = localStorage.getItem('user');
     return user !== null;

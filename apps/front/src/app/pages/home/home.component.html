@@ -1,19 +1,29 @@
-<div class="container my-5">
-  <h1 class="mb-5">{{ 'pages.home.title' | translate }}</h1>
-
-  <div class="row">
-    <div class="col">
-      <h2>{{ 'pages.home.blocGrade.title' | translate }}</h2>
-      <span>10/20</span>
-    </div>
-    <div class="col">
-      <h2>{{ 'pages.home.blocFeedback.title' | translate }}</h2>
-      <span>Michel est trop indiscipliné. Il a montré son sboob en classe. Recallé</span>
-    </div>
+<nav class="navbar fixed-top bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">{{ 'appName' | translate }}</a>
+    <button class="btn text-white" (click)="logout()">{{ 'pages.home.header.logoutButton' | translate }}</button>
   </div>
+</nav>
 
-  <div>
-    <h2>{{ 'pages.home.blocTodayClasses.title' | translate }}</h2>
-    <a href="#">Cours de SVT avec Madame Pinard</a>
+<div class="pt-5">
+  <div class="container my-5">
+    <h1 class="mb-5">{{ 'pages.home.title' | translate }}</h1>
+
+    <div class="row">
+      <div class="col">
+        <h2>{{ 'pages.home.blocGrade.title' | translate }}</h2>
+        <span>10/20</span>
+      </div>
+      <div class="col">
+        <h2>{{ 'pages.home.blocFeedback.title' | translate }}</h2>
+        <span>Michel est trop indiscipliné. Il a montré son sboob en classe. Recallé</span>
+      </div>
+    </div>
+
+    <div>
+      <h2>{{ 'pages.home.blocTodayClasses.title' | translate }}</h2>
+      <a href="#">Cours de SVT avec Madame Pinard</a>
+    </div>
   </div>
 </div>
+

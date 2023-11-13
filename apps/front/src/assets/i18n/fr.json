@@ -1,4 +1,5 @@
 {
+  "appName": "Paye Ton Sboob",
   "pages": {
     "login": {
       "title": "Paye ton Sboob",
@@ -22,6 +23,9 @@
       "forgotPassword": "Mot de passe oublié ?"
     },
     "home": {
+      "header": {
+        "logoutButton": "Se déconnecter"
+      },
       "title": "Bienvenue prénom",
       "blocGrade": {
         "title": "Dernière note"
