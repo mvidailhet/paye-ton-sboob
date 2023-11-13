@@ -21,6 +21,18 @@
         "submitButton": "Se connecter"
       },
       "forgotPassword": "Mot de passe oublié ?"
+    },
+    "home": {
+      "title": "Bienvenue prénom",
+      "blocGrade": {
+        "title": "Dernière note"
+      },
+      "blocFeedback": {
+        "title": "Dernier avis"
+      },
+      "blocTodayClasses": {
+        "title": "Cours du jour"
+      }
     }
   }
 }
