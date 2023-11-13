@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+export type Role = 'student' | 'teacher' | 'admin';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -35,5 +37,14 @@ export class AuthService {
   isLogged(): boolean {
     const user = localStorage.getItem('user');
     return user !== null;
+  }
+
+  getUserRole(): Role {
+    const userStr = localStorage.getItem('user');
+    if (!userStr) {
+      throw new Error('User not found');
+    }
+    const user = JSON.parse(userStr);
+    return user.role;
   }
 }

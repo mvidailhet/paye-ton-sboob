@@ -1,29 +1,40 @@
-<nav class="navbar fixed-top bg-primary">
+<nav class="navbar navbar-expand fixed-top bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand text-white" href="#">{{ 'appName' | translate }}</a>
-    <button class="btn text-white" (click)="logout()">{{ 'pages.home.header.logoutButton' | translate }}</button>
+    <a class="navbar-brand text-white" href="#">{{ "appName" | translate }}</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngFor="let link of links">
+          <a class="nav-link text-white" routerLinkActive="active" [routerLink]="link.link">{{ link.name }}</a>
+        </li>
+      </ul>
+    </div>
+    <button class="btn text-white" (click)="logout()">
+      <i class="bi bi-door-closed-fill me-1"></i>
+    </button>
   </div>
 </nav>
 
 <div class="pt-5">
   <div class="container my-5">
-    <h1 class="mb-5">{{ 'pages.home.title' | translate }}</h1>
+    <h1 class="mb-5">{{ "pages.home.title" | translate }}</h1>
 
     <div class="row">
       <div class="col">
-        <h2>{{ 'pages.home.blocGrade.title' | translate }}</h2>
+        <h2>{{ "pages.home.blocGrade.title" | translate }}</h2>
         <span>10/20</span>
       </div>
       <div class="col">
-        <h2>{{ 'pages.home.blocFeedback.title' | translate }}</h2>
-        <span>Michel est trop indiscipliné. Il a montré son sboob en classe. Recallé</span>
+        <h2>{{ "pages.home.blocFeedback.title" | translate }}</h2>
+        <span
+          >Michel est trop indiscipliné. Il a montré son sboob en classe.
+          Recallé</span
+        >
       </div>
     </div>
 
     <div>
-      <h2>{{ 'pages.home.blocTodayClasses.title' | translate }}</h2>
+      <h2>{{ "pages.home.blocTodayClasses.title" | translate }}</h2>
       <a href="#">Cours de SVT avec Madame Pinard</a>
     </div>
   </div>
 </div>
-
