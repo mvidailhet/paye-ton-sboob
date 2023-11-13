@@ -26,11 +26,11 @@ export class HomeComponent {
         return [
           {
             name: 'Promotions',
-            link: '/promotions',
+            link: '/admin/promotions',
           },
           {
             name: 'Edtudiants',
-            link: '/etudiants',
+            link: '/admin/etudiants',
           },
         ];
       default:
