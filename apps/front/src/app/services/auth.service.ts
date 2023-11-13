@@ -27,4 +27,9 @@ export class AuthService {
     localStorage.setItem('user', JSON.stringify(user));
     return true;
   }
+
+  isLogged(): boolean {
+    const user = localStorage.getItem('user');
+    return user !== null;
+  }
 }
