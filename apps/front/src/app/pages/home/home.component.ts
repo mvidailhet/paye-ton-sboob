@@ -37,19 +37,19 @@ export class HomeComponent {
         return [
           {
             name: 'Profil',
-            link: '/profile',
+            link: '/student/profile',
           },
           {
             name: 'Dossier',
-            link: '/dossier',
+            link: '/student/dossier',
           },
           {
             name: 'Scolarité',
-            link: '/scolarite',
+            link: '/student/scolarite',
           },
           {
             name: 'Mes cours',
-            link: '/mescours',
+            link: '/student/mescours',
           },
         ]
     }
