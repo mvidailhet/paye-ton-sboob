@@ -1,1 +1,11 @@
 <p>promotions works!</p>
+<form [formGroup]="loginForm">
+  <div class="form-group mb-3">
+    <label for="email">{{ 'pages.login.form.email.label' | translate }}</label>
+    <input type="text" class="form-control" id="email" formControlName="email">
+  </div>
+  <div class="form-group">
+    <label for="password">{{ 'pages.login.form.password.label' | translate }}</label>
+    <input type="password" class="form-control" id="password" formControlName="password">
+  </div>
+</form>
