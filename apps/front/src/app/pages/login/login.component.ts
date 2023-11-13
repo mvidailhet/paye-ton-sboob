@@ -9,14 +9,23 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 export class LoginComponent {
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required],
+    password: [
+      '',
+      [
+        Validators.required,
+        Validators.minLength(8),
+        Validators.pattern(
+          '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-zd$@$!%*?&]'
+        ),
+      ],
+    ],
   });
 
   constructor(private fb: FormBuilder) {}
 
   onSubmit() {
     console.log('submit');
-    console.log(this.loginForm.get('email'));
+    console.log(this.loginForm);
   }
 
   get email() {

@@ -20,6 +20,12 @@
       <small class="text-danger" *ngIf="password.touched && password.hasError('required')">
         Le mot de passe est obligatoire
       </small>
+      <small class="text-danger" *ngIf="password.touched && password.hasError('minlength')">
+        Le mot de passe est trop court
+      </small>
+      <small class="text-danger" *ngIf="password.touched && password.hasError('pattern') && !password.hasError('minlength')">
+        Le mot de passe n'est pas valide. Il faut s'enrouler dans du jambon et le sang d'une vierge
+      </small>
     </div>
     <div class="text-center">
       <button type="submit" class="btn btn-primary mt-4">Se connecter</button>
