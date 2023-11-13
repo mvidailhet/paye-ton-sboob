@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -17,5 +17,9 @@ export class LoginComponent {
   onSubmit() {
     console.log('submit');
     console.log(this.loginForm.get('email'));
+  }
+
+  get email() {
+    return this.loginForm.get('email') as FormControl;
   }
 }

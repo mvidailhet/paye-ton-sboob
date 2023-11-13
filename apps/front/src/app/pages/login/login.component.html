@@ -5,12 +5,14 @@
     <div class="form-group mb-3">
       <label for="email">Email</label>
       <input type="text" class="form-control" id="email" formControlName="email">
-      <div *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched">
-        <small class="text-danger">L'email est obligatoire</small>
-      </div>
-      <div *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched">
-        <small class="text-danger">L'email n'est pas valide</small>
-      </div>
+      <small class="text-danger" *ngIf="email.touched">
+        <ng-container *ngIf="email.hasError('required')">
+          L'email est obligatoire
+        </ng-container>
+        <ng-container *ngIf="email.hasError('email')">
+          L'email n'est pas valide
+        </ng-container>
+      </small>
     </div>
     <div class="form-group">
       <label for="password">Mot de passe</label>
